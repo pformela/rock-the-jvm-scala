@@ -23,4 +23,11 @@ object HOFsAndCurries extends App {
 
   val plus10 = nTimesBetter(plusOne, 10)
   println(plus10(7))
+
+  def toCurry(f: (Int, Int) => Int): (Int => Int => Int) = {
+    x => y => f(x, y)
+  }
+  def fromCurry(f: (Int => Int => Int)): (Int, Int) => Int =
+    (x, y) => f(x)(y)
+
 }
