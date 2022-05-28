@@ -104,6 +104,9 @@ object ListTest {
 
     println(list2.flatMap((element: Int) => List(element, List(element + 1, Empty))))
 
+    for {
+      num <- list
+    } println(num)
 
   }
 

@@ -42,4 +42,19 @@ object HOFsAndCurries extends App {
 
   def fromCurry(f: Int => Int => Int): (Int, Int) => Int =
     (x: Int, y: Int) => f(x)(y)
+
+  def compose[A, B, T](f: A => B, g: T => A): T => B =
+    x => f(g(x))
+
+  def andThen[A, B, T](f: A => B, g: B => T): A => T =
+    x => g(f(x))
+
+  def superAdder2: Int => Int => Int = toCurry(_+_)
+  def add4 = superAdder2(4)
+
+  println(add4(17))
+
+  val simpleAdder = fromCurry(superAdder)
+  println(simpleAdder(4, 17))
+
 }
