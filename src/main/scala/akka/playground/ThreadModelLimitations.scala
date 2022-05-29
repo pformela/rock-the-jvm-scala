@@ -1,5 +1,7 @@
 package akka.playground
 
+import scala.concurrent.Future
+
 object ThreadModelLimitations extends App {
 
   class BankAccount(private var amount: Int) {
@@ -56,5 +58,16 @@ object ThreadModelLimitations extends App {
   Thread.sleep(1000)
   delegateToBackgroundThread(() => println("this should run in the background"))
 
+  // 1M numbers in between 10 threads
+  import scala.concurrent.ExecutionContext.Implicits.global
+  val futures = (0 to 9)
+    .map(i => 100000 * i until 100000 * (i + 1))
+    .map(range => Future {
+      if(range.contains(537293)) throw new RuntimeException("invalid number")
+      range.sum
+    })
+
+  val sumFuture = Future.reduceLeft(futures)(_ + _)
+  sumFuture.onComplete(println)
 
 }
