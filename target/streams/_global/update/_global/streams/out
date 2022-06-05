@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
+[warn] akka-actor_3-2.6.19.jar no longer exists at /home/patryk/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_3/2.6.19/akka-actor_3-2.6.19.jar
+[debug] not up to date. inChanged = false, force = false
 [debug] Updating ...
 [debug] Done updating 
