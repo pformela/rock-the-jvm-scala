@@ -1,4 +1,4 @@
-[warn] akka-actor_3-2.6.19-sources.jar no longer exists at /home/patryk/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_3/2.6.19/akka-actor_3-2.6.19-sources.jar
+[warn] scala3-library_3-3.1.1-sources.jar no longer exists at /home/patryk/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.1.1/scala3-library_3-3.1.1-sources.jar
 [debug] not up to date. inChanged = false, force = false
-[debug] Updating ProjectRef(uri("file:/home/patryk/Java_projects/scala/rock-the-jvm/"), "root")...
-[debug] Done updating ProjectRef(uri("file:/home/patryk/Java_projects/scala/rock-the-jvm/"), "root")
+[debug] Updating ProjectRef(uri("file:/home/LABPK/pformela/IdeaProjects/rock_the_jvm/"), "root")...
+[debug] Done updating ProjectRef(uri("file:/home/LABPK/pformela/IdeaProjects/rock_the_jvm/"), "root")
